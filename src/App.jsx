@@ -1,4 +1,5 @@
 import { useLayoutEffect, useRef, useState } from "react"
+import 'leaflet/dist/leaflet.css'
 import Info from "./components/Info";
 import Maps from "./components/Maps"
 

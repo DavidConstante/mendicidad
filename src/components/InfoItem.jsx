@@ -2,7 +2,7 @@ import icon from '../assets/whatsapp.gif'
 
 const InfoItem = () => {
   return (
-    <div className="  mx-1 mb-2 bg-slate-200  flex justify-center font-sans">
+    <div className="  mx-4 mb-2  bg-slate-200  flex justify-center font-sans">
       <div className="rounded bg-grey-light p-2">
         <div className="flex justify-between py-1">
           <h3 className="font-bold">Salcedo</h3>
