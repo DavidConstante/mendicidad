@@ -1,33 +1,18 @@
-import { useLayoutEffect, useRef, useState } from "react"
 import 'leaflet/dist/leaflet.css'
-import Info from "./components/Info";
-import Maps from "./components/Maps"
+import { Route, Routes } from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import MapPage from './pages/MapPage'
 
 function App() {
 
-  const titleRef = useRef();
-  const [heightTitle, setHeightTitle] = useState(0)
 
-  useLayoutEffect(() => {
-    setHeightTitle(titleRef.current.getBoundingClientRect().height)
-  }, [])
 
   return (
-    <div className="">
-      <h1
-        className="m-4 text-2xl text-center"
-        ref={titleRef}
-      >
-        Puntos de recoleccion mendicidad
-      </h1>
-      <div className="flex">
-
-        <div className="w-4/5">
-          <Maps heightTitle={heightTitle} />
-        </div>
-        <Info />
-
-      </div>
+    <div >
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/maps" element={<MapPage />} />
+      </Routes>
     </div>
   )
 }

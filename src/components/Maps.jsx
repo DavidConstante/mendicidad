@@ -4,8 +4,7 @@ import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
 
 
 
-const Maps = ({ heightTitle }) => {
-  const height = window.innerHeight - 2 * heightTitle;
+const Maps = () => {
   const position = [-0.9339756083425039, -78.6145568742513]
 
   const markerRef = useRef(null)
@@ -14,7 +13,6 @@ const Maps = ({ heightTitle }) => {
       dragend() {
         const marker = markerRef.current
         if (marker != null) {
-          // setPosition(marker.getLatLng())
           console.log(marker.getLatLng())
         }
       },
