@@ -2,8 +2,16 @@ import React, { useContext, useEffect, useRef } from 'react'
 import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
 import { PlaceContext } from '../contextPlaceContext'
 
+import iconMarker from 'leaflet/dist/images/marker-icon.png'
+import iconRetina from 'leaflet/dist/images/marker-icon-2x.png'
+import iconShadow from 'leaflet/dist/images/marker-shadow.png'
 
 
+const icon = L.icon({
+  iconRetinaUrl: iconRetina,
+  iconUrl: iconMarker,
+  shadowUrl: iconShadow
+});
 
 const Maps = () => {
 
@@ -37,6 +45,7 @@ const Maps = () => {
           <Marker
             key={place.name}
             position={place.location}
+            icon={icon}
           >
             <Popup>
               <p>{place.name}</p>
