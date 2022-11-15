@@ -8,7 +8,7 @@ const places = [
   {
     name: "Pastocalle",
     address: 'Gad Pastocalle',
-    location: [-0.7274739684376812, -78.63470460736725],
+    location: [-0.9455356948370244, -78.61183537717544],
     manager: 'Nancy Iza',
     phone: '0984128768',
     schedule: 'Lunes a Viernes de 8:00 a 17:00'
