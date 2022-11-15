@@ -1,11 +1,15 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
+
 import logoMiess from '../assets/logoMiess.png'
+import { PlaceContext } from '../contextPlaceContext'
 import Info from './Info'
 
 
 
 const Header = ({ }) => {
+
+  const { position, changeFocus, places } = useContext(PlaceContext)
 
   const [path, setPath] = useState()
   useEffect(() => {
@@ -14,7 +18,7 @@ const Header = ({ }) => {
 
 
   return (
-    <div className=' flex justify-around w-screen'  >
+    <div className=' flex justify-around items-center w-screen'  >
 
       <div className="w-2/5 ">
         <NavLink to={'/'}>
@@ -26,9 +30,12 @@ const Header = ({ }) => {
         path === '/maps'
           ?
           <div className='w-4/5 flex flex-row items-center overflow-auto no-scrollbar p-2 m-4'>
-            <Info />
-            <Info />
-            <Info />
+            {
+              places.map(place => {
+                return (<Info key={place.name} name={place.name} location={place.location} />)
+              })
+            }
+
           </div>
 
           : null
