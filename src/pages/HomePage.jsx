@@ -13,7 +13,7 @@ const HomePage = () => {
       {/* Hero */}
       <div className='flex flex-col items-center'>
         <h1 className="mx-8 my-8 text-3xl md:text-4xl lg:text-7xl text-center font-bold  ">
-          {`Mendicidad con Dignidad`}
+          {`Solidaridad sin Mendicidad`}
         </h1>
 
 
