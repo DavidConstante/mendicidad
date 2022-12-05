@@ -1,6 +1,7 @@
 import React from 'react'
 import Maps from '../components/Maps'
 import Header from '../components/Header'
+import 'animate.css';
 
 
 const MapPage = () => {
@@ -10,7 +11,7 @@ const MapPage = () => {
       <Header />
       <hr />
 
-      <div className=''>
+      <div className='animate__animated animate__fadeIn'>
 
         <Maps >
         </Maps>

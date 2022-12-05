@@ -12,7 +12,7 @@ const Info = ({ name, location }) => {
     <div className='px-2'>
 
       <button
-        className='bg-gray-200 rounded-full p-2 my-2 w-48  flex  justify-center items-center'
+        className='bg-gray-200 rounded-full p-2 my-2 w-48  flex  justify-center items-center duration-200 hover:scale-110'
         onClick={() => changeFocus(location)}
       >
         <PlaceIcon sx={{ mr: 1 }} />

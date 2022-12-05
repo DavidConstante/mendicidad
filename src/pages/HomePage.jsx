@@ -32,8 +32,8 @@ const HomePage = () => {
             alt=""
           />
           <div className='m-8'>
-            <p className='text-2xl m-4'>{`¿Qué? se puede donar`}</p>
-            <ul class="list-disc">
+            <p className='text-2xl lg:text-4xl m-4 font-bold'>{`¿Qué se puede donar?`}</p>
+            <ul class="list-disc text-xl lg:text-2xl">
               <li>Alimentos no perecibles.</li>
               <li>Ropa y juguetes nuevos o en buen estado.</li>
             </ul>
@@ -43,12 +43,15 @@ const HomePage = () => {
 
 
         <NavLink to='/maps'>
-          <button className='bg-orange-400 hover:bg-orange-500 text-white font-bold py-2 px-4 mb-4 lg:my-12 rounded-lg'      >
+          <button className='bg-orange-400 hover:bg-orange-500 duration-500 hover:scale-125 text-white font-bold py-2 px-4 mb-4 lg:my-10 rounded-lg'      >
             Puntos de Recolección
           </button>
 
         </NavLink>
 
+        <p className='text-slate-300'>
+          copyright © 2022 - David Constante
+        </p>
 
       </div>
 
