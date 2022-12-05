@@ -1,5 +1,6 @@
 import { Fab } from '@mui/material'
 import NavigationIcon from '@mui/icons-material/Navigation';
+import PlaceIcon from '@mui/icons-material/Place';
 import { PlaceContext } from '../contextPlaceContext';
 import { useContext } from 'react';
 
@@ -9,13 +10,15 @@ const Info = ({ name, location }) => {
 
   return (
     <div className='px-2'>
-      <Fab
-        variant="extended"
+
+      <button
+        className='bg-gray-200 rounded-full p-2 my-2 w-48  flex  justify-center items-center'
         onClick={() => changeFocus(location)}
       >
-        <NavigationIcon sx={{ mr: 1 }} />
+        <PlaceIcon sx={{ mr: 1 }} />
         {name}
-      </Fab>
+
+      </button>
     </div>
   )
 }

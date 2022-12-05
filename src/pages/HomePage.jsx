@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import logoMiess from '../assets/logoMiess.png'
+import wallpaper from '../assets/wallpaper.jpg'
 import Header from '../components/Header'
 
 const HomePage = () => {
@@ -11,20 +11,39 @@ const HomePage = () => {
       <hr />
 
       {/* Hero */}
-      <div className='flex flex-col items-center'>
+      <div className='flex flex-col items-center bg-bg text-white'>
         <h1 className="mx-8 my-8 text-3xl md:text-4xl lg:text-7xl text-center font-bold  ">
           {`Solidaridad sin Mendicidad`}
         </h1>
 
 
-        <p className='p-8 text-xl text-justify' >
-          {`Entrega tus donativos en los puntos de recolección del Ministerio de Inlcusión Economica y Social, ubicados en las principales ciudades del cantón.`}
+        <p className='px-8 text-xl text-justify lg:w-4/5' >
+          {`Entregar donaciones en la vía pública es preligroso, puedes ponerte en contacto con las comunidades aledañas para que tú mismo entregues tus donaciones en un lugar seguro. Cuida tu integridad y la de los demás.`}
         </p>
 
-        <img className='p-1' src="https://www.inclusion.gob.ec/wp-content/uploads/2017/11/1.jpg" alt="" />
+
+
+
+        <div className='static flex flex-col items-center lg:flex-row justify-center m-4 '>
+
+          <img
+            className=' w-full lg:w-2/4 border-2 border-white rounded-xl'
+            src={wallpaper}
+            alt=""
+          />
+          <div className='m-8'>
+            <p className='text-2xl m-4'>{`¿Qué? se puede donar`}</p>
+            <ul class="list-disc">
+              <li>Alimentos no perecibles.</li>
+              <li>Ropa y juguetes nuevos o en buen estado.</li>
+            </ul>
+          </div>
+
+        </div>
+
 
         <NavLink to='/maps'>
-          <button className='bg-blue-700 hover:bg-blue-500 text-white font-bold py-2 px-4 my-12 rounded-lg'      >
+          <button className='bg-orange-400 hover:bg-orange-500 text-white font-bold py-2 px-4 mb-4 lg:my-12 rounded-lg'      >
             Puntos de Recolección
           </button>
 

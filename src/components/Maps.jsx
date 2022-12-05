@@ -1,17 +1,29 @@
-import React, { useContext, useEffect, useRef } from 'react'
+import React, { useContext, useEffect, useMemo, useRef } from 'react'
 import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
 import { PlaceContext } from '../contextPlaceContext'
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 
 import iconMarker from 'leaflet/dist/images/marker-icon.png'
 import iconRetina from 'leaflet/dist/images/marker-icon-2x.png'
 import iconShadow from 'leaflet/dist/images/marker-shadow.png'
 
 
-const icon = L.icon({
-  iconRetinaUrl: iconRetina,
+const blueIcon = L.icon({
   iconUrl: iconMarker,
+  // iconRetinaUrl: iconRetina,
   shadowUrl: iconShadow
 });
+
+const greenIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+
+
 
 const Maps = () => {
 
@@ -19,10 +31,13 @@ const Maps = () => {
 
   const { places, position } = useContext(PlaceContext)
 
+  let zoom = 13;
 
   const ChangeCenter = (coords) => {
     const map = useMap();
-    map.setView((coords.coords), 14);
+    JSON.stringify(position) === JSON.stringify([-0.67167, -78.59491]) ? zoom = 13 : zoom = 15
+    map.setView((coords.coords), zoom);
+
 
   }
 
@@ -30,7 +45,7 @@ const Maps = () => {
   return (
     <MapContainer
       center={position}
-      zoom={12}
+      // zoom={13}
       scrollWheelZoom={true}
       style={{ height: '90vh', width: "100%" }}
       ref={mapRef}
@@ -45,11 +60,12 @@ const Maps = () => {
           <Marker
             key={place.name}
             position={place.location}
-            icon={icon}
+            icon={blueIcon}
+
           >
             <Popup>
               <p>{place.name}</p>
-              <p>{place.address}</p>
+              {/* <p>{place.address}</p> */}
               <p>{place.manager}</p>
               <p>{place.phone}</p>
               <p>{place.schedule}</p>
