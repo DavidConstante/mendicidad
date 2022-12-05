@@ -11,7 +11,7 @@ const HomePage = () => {
       <hr />
 
       {/* Hero */}
-      <div className='flex flex-col items-center bg-bg text-white'>
+      <div className='flex flex-col items-center bg-gradient-to-r from-bg to-blue-600 text-white'>
         <h1 className="mx-8 my-8 text-3xl md:text-4xl lg:text-7xl text-center font-bold  ">
           {`Solidaridad sin Mendicidad`}
         </h1>
