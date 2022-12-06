@@ -18,7 +18,7 @@ const Header = ({ }) => {
 
 
   return (
-    <div className=' flex justify-around items-center w-screen'  >
+    <div className=' flex justify-around items-center '  >
 
       <div className="">
         <NavLink to={'/'}>
