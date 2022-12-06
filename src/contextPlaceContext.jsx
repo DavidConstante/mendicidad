@@ -91,8 +91,8 @@ const places = [
     location: [-0.71011, -78.63355],
     manager: 'Roberto Quinatoa',
     phone: '0983147152',
-    manager: 'Marina Puco',
-    phone: '0992657312',
+    manager2: 'Marina Puco',
+    phone2: '0992657312',
     schedule: 'Lunes a Viernes de 8:00 a 17:00'
 
   },
