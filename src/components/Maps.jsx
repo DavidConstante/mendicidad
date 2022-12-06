@@ -53,7 +53,7 @@ const Maps = () => {
         center={position}
         // zoom={13}
         scrollWheelZoom={true}
-        style={{ height: '90vh', width: "100%" }}
+        style={{ height: '89vh', width: "100%" }}
         ref={mapRef}
 
       >
