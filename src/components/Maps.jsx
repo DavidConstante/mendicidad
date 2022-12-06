@@ -1,11 +1,12 @@
-import React, { useContext, useEffect, useMemo, useRef } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
 import { PlaceContext } from '../contextPlaceContext'
-import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
+
 
 import iconMarker from 'leaflet/dist/images/marker-icon.png'
 import iconRetina from 'leaflet/dist/images/marker-icon-2x.png'
 import iconShadow from 'leaflet/dist/images/marker-shadow.png'
+import { Alert, AlertTitle } from '@mui/material'
 
 
 const blueIcon = L.icon({
@@ -27,59 +28,79 @@ const greenIcon = new L.Icon({
 
 const Maps = () => {
 
-  const mapRef = useRef();
-
   const { places, position } = useContext(PlaceContext)
-
+  const mapRef = useRef();
   let zoom = 13;
+  const [alert, setAlert] = useState(true)
+
 
   const ChangeCenter = (coords) => {
     const map = useMap();
     JSON.stringify(position) === JSON.stringify([-0.67167, -78.59491]) ? zoom = 13 : zoom = 15
     map.setView((coords.coords), zoom);
-
-
   }
+
+  useEffect(() => {
+    setTimeout(() => {
+      setAlert(false)
+    }, 4000);
+  }, [])
 
 
   return (
-    <MapContainer
-      center={position}
-      // zoom={13}
-      scrollWheelZoom={true}
-      style={{ height: '90vh', width: "100%" }}
-      ref={mapRef}
+    <>
+      <MapContainer
+        center={position}
+        // zoom={13}
+        scrollWheelZoom={true}
+        style={{ height: '90vh', width: "100%" }}
+        ref={mapRef}
 
-    >
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
-      {places?.map(place => {
-        return (
-          <Marker
-            key={place.name}
-            position={place.location}
-            icon={blueIcon}
+        {places?.map(place => {
+          return (
+            <Marker
+              key={place.name}
+              position={place.location}
+              icon={blueIcon}
 
-          >
-            <Popup>
-              <p>{place.name}</p>
-              {/* <p>{place.address}</p> */}
-              <p>{place.manager}</p>
-              <p>{place.phone}</p>
-              <p>{place.schedule}</p>
-              <a className='bg-blue-200 p-2 rounded-md' href={`https://www.google.com/maps/dir//${place.location[0]},${place.location[1]}`} target="_blank">¿Cómo Llegar?</a>
+            >
+              <Popup>
+                <p>{place.name}</p>
+                {/* <p>{place.address}</p> */}
+                <p>{`${place.manager} - ${place.phone}`}</p>
+                <p>{`${place.manager2} - ${place.phone2}`}</p>
+                <p>{place.schedule}</p>
+                <a className='bg-blue-200 p-2 rounded-md' href={`https://www.google.com/maps/dir//${place.location[0]},${place.location[1]}`} target="_blank">¿Cómo Llegar?</a>
 
-            </Popup>
-          </Marker>
-        )
-      })}
+              </Popup>
+            </Marker>
+          )
+        })}
 
 
-      <ChangeCenter coords={position} />
+        <ChangeCenter coords={position} />
 
-    </MapContainer>
+      </MapContainer>
+
+      <div
+        className={alert ? '' : 'hidden'}
+      >
+
+        <Alert
+          className={`absolute z-10 top-0  right-0 }`}
+          onClick={() => setAlert(false)}
+          severity="info"
+          style={{ width: '70%' }}
+        >
+          Toca uno de los puntos marcados para saber con quien contactarte.
+        </Alert>
+      </div>
+    </>
   )
 }
 

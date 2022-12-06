@@ -8,36 +8,44 @@ const places = [
   {
     name: "La Libertad",
     address: 'San Juan de Pastocalle',
-    location: [-0.6124681585458935, -78.62404538465583],
-    manager: 'David Constante',
-    phone: '0984128768',
+    location: [-0.61663, -78.62918],
+    manager: 'Luis Marcelo Chinchuña',
+    phone: '0980687899',
+    manager2: 'Carla Figueroa',
+    phone2: '0986011474',
     schedule: 'Lunes a Viernes de 8:00 a 17:00'
 
   },
   {
-    name: "Romerios",
+    name: "Romerillos",
     address: 'San Juan de Pastocalle',
-    location: [-0.6161091587250174, -78.62863382883603],
-    manager: 'David Constante',
-    phone: '0984128768',
+    location: [-0.6286, -78.60927],
+    manager: 'David Cajía',
+    phone: '0993951980',
+    manager2: 'Amparo Iza',
+    phone2: '0982893937',
     schedule: 'Lunes a Viernes de 8:00 a 17:00'
 
   },
   {
     name: "San Bartolomé",
     address: 'San Juan de Pastocalle',
-    location: [-0.7236229085335766, -78.61972912883606],
-    manager: 'Nancy Iza',
-    phone: '0984128768',
+    location: [-0.71011, -78.63355],
+    manager: 'Whashington Chicaiza',
+    phone: '0989696607',
+    manager2: 'Rolando Chicaiza',
+    phone2: '0959497640',
     schedule: 'Lunes a Viernes de 8:00 a 17:00'
 
   },
   {
-    name: "Quielchemin",
+    name: "Cuilche Miño",
     address: 'San Juan de Pastocalle',
-    location: [-0.7236880323734628, -78.61031278465583],
-    manager: 'Patricia Procel',
-    phone: '0984128768',
+    location: [-0.7239, -78.61971],
+    manager: 'Orlando Toctaguano',
+    phone: '0987973939',
+    manager2: 'Encargado Agua',
+    phone2: '0969044373',
     schedule: 'Lunes a Viernes de 8:00 a 17:00'
 
   },
@@ -46,9 +54,11 @@ const places = [
   {
     name: "Cuilche Salas",
     address: 'San Juan de Pastocalle',
-    location: [-0.7237089043948572, -78.61032591349188],
-    manager: 'Celimo Constante',
-    phone: '0984128768',
+    location: [-0.72388, -78.61035],
+    manager: 'Luis Casa',
+    phone: '0999001034',
+    manager2: 'Mario Toapanta',
+    phone2: '0981530836',
     schedule: 'Lunes a Viernes de 8:00 a 17:00'
 
   },
@@ -57,8 +67,10 @@ const places = [
     name: "Comuna el Boliche",
     address: 'San Juan de Pastocalle',
     location: [-0.7099878197330917, -78.60942388465583],
-    manager: 'David Constante',
-    phone: '0984128768',
+    manager: 'Fausto Casa',
+    phone: '0985889629',
+    manager2: 'Roberto Toapanta',
+    phone2: '0988390059',
     schedule: 'Lunes a Viernes de 8:00 a 17:00'
 
   },
@@ -66,17 +78,21 @@ const places = [
     name: "Chasqui",
     address: 'San Juan de Pastocalle',
     location: [-0.7092960438032826, -78.59469715767207],
-    manager: 'David Constante',
-    phone: '0984128768',
+    manager: 'Mercedes Llano',
+    phone: '0987011017',
+    manager2: 'Luis Puco',
+    phone2: '0995154192',
     schedule: 'Lunes a Viernes de 8:00 a 17:00'
 
   },
   {
     name: "Santa Rita",
     address: 'San Juan de Pastocalle',
-    location: [-0.698582519142334, -78.58449058465584],
-    manager: 'David Constante',
-    phone: '0984128768',
+    location: [-0.71011, -78.63355],
+    manager: 'Roberto Quinatoa',
+    phone: '0983147152',
+    manager: 'Marina Puco',
+    phone: '0992657312',
     schedule: 'Lunes a Viernes de 8:00 a 17:00'
 
   },
