@@ -92,10 +92,10 @@ const Maps = () => {
       >
 
         <Alert
-          className={`absolute z-10 top-0  right-0 }`}
+          className={`absolute z-10 top-0  right-0  m-1 w-4/6 lg:w-1/2 lg:m-4`}
           onClick={() => setAlert(false)}
           severity="info"
-          style={{ width: '70%' }}
+          variant='filled'
         >
           Toca uno de los puntos marcados para saber con quien contactarte.
         </Alert>
