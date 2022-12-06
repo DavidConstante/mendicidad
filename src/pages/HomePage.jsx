@@ -44,7 +44,7 @@ const HomePage = () => {
 
         <NavLink to='/maps'>
           <button className='bg-orange-400 hover:bg-orange-500 duration-500 hover:scale-125 text-white font-bold py-2 px-4 mb-4 lg:my-10 rounded-lg'      >
-            Puntos de Recolección
+            Puntos de donación
           </button>
 
         </NavLink>
