@@ -13,7 +13,7 @@ const places = [
     phone: '0980687899',
     manager2: 'Carla Figueroa',
     phone2: '0986011474',
-    schedule: 'Lunes a Viernes de 8:00 a 17:00'
+    schedule: 'Lunes a Domingo de 8:00 a 17:00'
 
   },
   {
@@ -24,7 +24,7 @@ const places = [
     phone: '0993951980',
     manager2: 'Amparo Iza',
     phone2: '0982893937',
-    schedule: 'Lunes a Viernes de 8:00 a 17:00'
+    schedule: 'Lunes a Domingo de 8:00 a 17:00'
 
   },
   {
@@ -35,7 +35,7 @@ const places = [
     phone: '0989696607',
     manager2: 'Rolando Chicaiza',
     phone2: '0959497640',
-    schedule: 'Lunes a Viernes de 8:00 a 17:00'
+    schedule: 'Lunes a Domingo de 8:00 a 17:00'
 
   },
   {
@@ -46,7 +46,7 @@ const places = [
     phone: '0987973939',
     manager2: 'Encargado Agua',
     phone2: '0969044373',
-    schedule: 'Lunes a Viernes de 8:00 a 17:00'
+    schedule: 'Lunes a Domingo de 8:00 a 17:00'
 
   },
 
@@ -59,7 +59,7 @@ const places = [
     phone: '0999001034',
     manager2: 'Mario Toapanta',
     phone2: '0981530836',
-    schedule: 'Lunes a Viernes de 8:00 a 17:00'
+    schedule: 'Lunes a Domingo de 8:00 a 17:00'
 
   },
 
@@ -71,7 +71,7 @@ const places = [
     phone: '0985889629',
     manager2: 'Roberto Toapanta',
     phone2: '0988390059',
-    schedule: 'Lunes a Viernes de 8:00 a 17:00'
+    schedule: 'Lunes a Domingo de 8:00 a 17:00'
 
   },
   {
@@ -82,7 +82,7 @@ const places = [
     phone: '0987011017',
     manager2: 'Luis Puco',
     phone2: '0995154192',
-    schedule: 'Lunes a Viernes de 8:00 a 17:00'
+    schedule: 'Lunes a Domingo de 8:00 a 17:00'
 
   },
   {
@@ -93,7 +93,7 @@ const places = [
     phone: '0983147152',
     manager2: 'Marina Puco',
     phone2: '0992657312',
-    schedule: 'Lunes a Viernes de 8:00 a 17:00'
+    schedule: 'Lunes a Domingo de 8:00 a 17:00'
 
   },
 ]
