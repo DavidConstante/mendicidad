@@ -63,6 +63,7 @@ const places = [
 
   },
 
+  // Cambiar 
   {
     name: "Comuna el Boliche",
     address: 'San Juan de Pastocalle',
@@ -94,6 +95,28 @@ const places = [
     manager2: 'Marina Puco',
     phone2: '0992657312',
     schedule: 'Lunes a Domingo de 8:00 a 17:00'
+
+  },
+  {
+    name: "Mies",
+    address: 'San Juan de Pastocalle',
+    location: [-0.9455894369382848, -78.61187710055121],
+    manager: 'Vanesa Vargas',
+    phone: '0999209110',
+    manager2: 'Vanesa Vargas',
+    phone2: '0999209110',
+    schedule: 'Lunes a Viernes de 8:00 a 17:00'
+
+  },
+  {
+    name: "Gobernación",
+    address: 'San Juan de Pastocalle',
+    location: [-0.9341901233400618, -78.61537623357765],
+    manager: '',
+    phone: '',
+    manager2: '',
+    phone2: '',
+    schedule: 'Lunes a Viernes de 8:00 a 17:00'
 
   },
 ]
