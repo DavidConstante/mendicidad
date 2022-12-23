@@ -68,7 +68,7 @@ const places = [
     name: "Comuna el Boliche",
     address: 'San Juan de Pastocalle',
     location: [-0.7099878197330917, -78.60942388465583],
-    manager: 'Fausto Casa',
+    manager: 'Mario Patricio Toapanta',
     phone: '0985889629',
     manager2: 'Roberto Toapanta',
     phone2: '0988390059',
