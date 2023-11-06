@@ -55,8 +55,8 @@ const places = [
     name: "Cuilche Salas",
     address: 'San Juan de Pastocalle',
     location: [-0.72388, -78.61035],
-    manager: 'Luis Casa',
-    phone: '0999001034',
+    manager: 'Esequiel Caiza',
+    phone: '0969577223',
     manager2: 'Mario Toapanta',
     phone2: '0981530836',
     schedule: 'Lunes a Domingo de 8:00 a 17:00'
@@ -68,8 +68,8 @@ const places = [
     name: "Comuna el Boliche",
     address: 'San Juan de Pastocalle',
     location: [-0.7099878197330917, -78.60942388465583],
-    manager: 'Fausto Casa',
-    phone: '0985889629',
+    manager: 'Mario Patricio Toapanta',
+    phone: '0992998123',
     manager2: 'Roberto Toapanta',
     phone2: '0988390059',
     schedule: 'Lunes a Domingo de 8:00 a 17:00'
