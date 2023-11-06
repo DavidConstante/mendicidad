@@ -11,7 +11,7 @@ const HomePage = () => {
       <hr />
 
       {/* Hero */}
-      <div className='flex flex-col items-center bg-gradient-to-r from-bg to-blue-600 text-white'>
+      <div className='flex flex-col items-center bg-gradient-to-r from-bg to-purple-800 text-white'>
         <h1 className="mx-8 my-8 text-3xl md:text-4xl lg:text-7xl text-center font-bold  ">
           {`Solidaridad sin Mendicidad`}
         </h1>
@@ -33,10 +33,10 @@ const HomePage = () => {
           />
           <div className='m-8'>
             <p className='text-2xl lg:text-4xl m-4 font-bold'>{`¿Qué se puede donar?`}</p>
-            <ul class="list-disc text-xl lg:text-2xl">
-              <li>Alimentos no perecibles.</li>
-              <li>Ropa y juguetes nuevos o en buen estado.</li>
-            </ul>
+            <h3 class="list-disc text-xl lg:text-2xl">
+              <h2>Alimentos no perecibles.</h2>
+              <h2>Ropa y juguetes nuevos o en buen estado.</h2>
+            </h3>
           </div>
 
         </div>
