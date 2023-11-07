@@ -50,7 +50,7 @@ const HomePage = () => {
         </NavLink>
 
         <p className='text-slate-300 w-full text-center'>
-          copyright © 2022 - David Constante
+          copyright © 2023 - David Constante
         </p>
 
       </div>
