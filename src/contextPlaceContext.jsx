@@ -11,19 +11,19 @@ const places = [
     location: [-0.61663, -78.62918],
     manager: 'Luis Marcelo Chinchuña',
     phone: '0980687899',
-    manager2: 'Carla Figueroa',
-    phone2: '0986011474',
+    manager2: '',
+    phone2: '',
     schedule: 'Lunes a Domingo de 8:00 a 17:00'
 
   },
   {
-    name: "Romerillos",
+    name: "Romerillos", //
     address: 'San Juan de Pastocalle',
     location: [-0.6286, -78.60927],
-    manager: 'David Cajía',
-    phone: '0993951980',
-    manager2: 'Amparo Iza',
-    phone2: '0982893937',
+    manager: 'Milton Santiago Rivera Alvarado',
+    phone: '0999646475',
+    manager2: '',
+    phone2: '',
     schedule: 'Lunes a Domingo de 8:00 a 17:00'
 
   },
@@ -33,50 +33,49 @@ const places = [
     location: [-0.71011, -78.63355],
     manager: 'Whashington Chicaiza',
     phone: '0989696607',
-    manager2: 'Rolando Chicaiza',
-    phone2: '0959497640',
+    manager2: '',
+    phone2: '',
     schedule: 'Lunes a Domingo de 8:00 a 17:00'
 
   },
   {
-    name: "Cuilche Miño",
+    name: "Cuilche Miño", //
     address: 'San Juan de Pastocalle',
     location: [-0.7239, -78.61971],
-    manager: 'Orlando Toctaguano',
-    phone: '0987973939',
-    manager2: 'Encargado Agua',
-    phone2: '0969044373',
+    manager: 'Blanca Marisol Hidalgo Toaquiza',
+    phone: '0987569899',
+    manager2: 'Angel Serafín Collaguazo Rivera',
+    phone2: '0981258496',
     schedule: 'Lunes a Domingo de 8:00 a 17:00'
 
   },
 
 
   {
-    name: "Cuilche Salas",
+    name: "Cuilche Salas",//
     address: 'San Juan de Pastocalle',
     location: [-0.72388, -78.61035],
-    manager: 'Esequiel Caiza',
-    phone: '0969577223',
-    manager2: 'Mario Toapanta',
-    phone2: '0981530836',
+    manager: 'Mario Toapanta',
+    phone: '0981530836',
+    manager2: '',
+    phone2: '',
     schedule: 'Lunes a Domingo de 8:00 a 17:00'
 
   },
 
-  // Cambiar 
   {
-    name: "Comuna el Boliche",
+    name: "Comuna el Boliche", //
     address: 'San Juan de Pastocalle',
     location: [-0.7099878197330917, -78.60942388465583],
-    manager: 'Mario Patricio Toapanta',
+    manager: 'Mario Patricio Toapanta Chasi',
     phone: '0992998123',
-    manager2: 'Roberto Toapanta',
-    phone2: '0988390059',
+    manager2: '',
+    phone2: '',
     schedule: 'Lunes a Domingo de 8:00 a 17:00'
 
   },
   {
-    name: "Chasqui",
+    name: "Chasqui", // 
     address: 'San Juan de Pastocalle',
     location: [-0.7092960438032826, -78.59469715767207],
     manager: 'Mercedes Llano',
@@ -87,13 +86,13 @@ const places = [
 
   },
   {
-    name: "Santa Rita",
+    name: "Santa Rita",//
     address: 'San Juan de Pastocalle',
     location: [-0.71011, -78.63355],
-    manager: 'Roberto Quinatoa',
+    manager: 'Rigoberto Quinatoa',
     phone: '0983147152',
-    manager2: 'Marina Puco',
-    phone2: '0992657312',
+    manager2: '',
+    phone2: '',
     schedule: 'Lunes a Domingo de 8:00 a 17:00'
 
   },
