@@ -20,6 +20,13 @@ const HomePage = () => {
         <p className='px-8 text-xl text-justify lg:w-4/5' >
           {`Entregar donaciones en la vía pública es preligroso, puedes ponerte en contacto con las comunidades aledañas para que tú mismo entregues tus donaciones en un lugar seguro. Cuida tu integridad y la de los demás.`}
         </p>
+        <br />
+        <p className='px-8 text-xl text-justify lg:w-4/5' >
+          {`CÓDIGO ORGÁNICO INTEGRAL PENAL (COIP)`}
+        </p>
+
+        <p className='px-8 text-md text-justify lg:w-4/5'>ART. 388.- CONTRAVENCIONES DE TRÁNSITO DE TERCERA CLASE.- Serán sancionados con multa equivalente al cuarenta por ciento de un salario básico unificado del trabajador en general y reducción de siete punto cinco puntos en su licencia de conducir:</p>
+        <p className='px-8 text-md text-justify lg:w-4/5'>1. La o el conductor que detengan o estacionen vehículos en sitios o zonas que entrañen peligro, tales como: zonas de seguridad, curvas, puentes, ingresos y salidas de los mismos, túneles, así como el ingreso y salida de estos, zonas estrechas, de poca visibilidad, cruces de caminos, cambios de rasante, pendientes, o pasos a desnivel, sin tomar las medidas de seguridad señaladas en los reglamentos.</p>
 
 
 
