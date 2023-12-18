@@ -1,7 +1,9 @@
 import { useContext, useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
-import logoMiess from '../assets/logoMiess.png'
+import logoMiess1 from '../assets/logo1.webp'
+import logoMiess2 from '../assets/logo2.webp'
+
 import { PlaceContext } from '../contextPlaceContext'
 import Info from './Info'
 
@@ -20,9 +22,13 @@ const Header = ({ }) => {
   return (
     <div className=' flex justify-around items-center '  >
 
-      <div className="">
+      <div className="flex justify-around w-full">
         <NavLink to={'/'}>
-          <img className=' p-4' width={150} src={logoMiess} alt="" />
+          <img className=' p-4' width={150} src={logoMiess1} alt="" />
+        </NavLink>
+
+        <NavLink to={'/'}>
+          <img className=' p-4' width={150} src={logoMiess2} alt="" />
         </NavLink>
       </div>
 
