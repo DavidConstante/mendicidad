@@ -107,17 +107,17 @@ const places = [
     schedule: 'Lunes a Viernes de 8:00 a 17:00'
 
   },
-  {
-    name: "Gobernación",
-    address: 'San Juan de Pastocalle',
-    location: [-0.9341901233400618, -78.61537623357765],
-    manager: '',
-    phone: '',
-    manager2: '',
-    phone2: '',
-    schedule: 'Lunes a Viernes de 8:00 a 17:00'
+  // {
+  //   name: "Gobernación",
+  //   address: 'San Juan de Pastocalle',
+  //   location: [-0.9341901233400618, -78.61537623357765],
+  //   manager: '',
+  //   phone: '',
+  //   manager2: '',
+  //   phone2: '',
+  //   schedule: 'Lunes a Viernes de 8:00 a 17:00'
 
-  },
+  // },
 ]
 
 const PlaceProvider = ({ children }) => {
