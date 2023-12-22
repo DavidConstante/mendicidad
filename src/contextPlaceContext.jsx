@@ -9,19 +9,19 @@ const places = [
     name: "La Libertad",
     address: 'San Juan de Pastocalle',
     location: [-0.61663, -78.62918],
-    manager: 'Luis Marcelo Chinchuña',
-    phone: '0980687899',
+    manager: 'Mónica Chacha',
+    phone: '0983643850',
     manager2: '',
     phone2: '',
     schedule: 'Lunes a Domingo de 8:00 a 17:00'
 
   },
   {
-    name: "Romerillos", //
+    name: "Romerillos",
     address: 'San Juan de Pastocalle',
     location: [-0.6286, -78.60927],
-    manager: 'Milton Santiago Rivera Alvarado',
-    phone: '0999646475',
+    manager: 'Patricio Chicaiza',
+    phone: '0995329855',
     manager2: '',
     phone2: '',
     schedule: 'Lunes a Domingo de 8:00 a 17:00'
@@ -55,8 +55,8 @@ const places = [
     name: "Cuilche Salas",//
     address: 'San Juan de Pastocalle',
     location: [-0.72388, -78.61035],
-    manager: 'Mario Toapanta',
-    phone: '0981530836',
+    manager: 'Luis Casa',
+    phone: '0999001034',
     manager2: '',
     phone2: '',
     schedule: 'Lunes a Domingo de 8:00 a 17:00'
@@ -67,8 +67,8 @@ const places = [
     name: "Comuna el Boliche", //
     address: 'San Juan de Pastocalle',
     location: [-0.7099878197330917, -78.60942388465583],
-    manager: 'Mario Patricio Toapanta Chasi',
-    phone: '0992998123',
+    manager: 'Blanca Caiza',
+    phone: '0968169037',
     manager2: '',
     phone2: '',
     schedule: 'Lunes a Domingo de 8:00 a 17:00'
@@ -89,8 +89,8 @@ const places = [
     name: "Santa Rita",//
     address: 'San Juan de Pastocalle',
     location: [-0.71011, -78.63355],
-    manager: 'Rigoberto Quinatoa',
-    phone: '0983147152',
+    manager: 'Jenny Masapanta',
+    phone: '0999908177',
     manager2: '',
     phone2: '',
     schedule: 'Lunes a Domingo de 8:00 a 17:00'
