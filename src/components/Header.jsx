@@ -2,7 +2,7 @@ import { useContext, useEffect, useState, useCallback, useRef } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 
 import logoMiess1 from '../assets/logo1.webp'
-import logoMiess2 from '../assets/logo2.webp'
+import logoMiess2 from '../assets/Logo_ENEC.png'
 
 import { PlaceContext } from '../contextPlaceContext'
 import Info from './Info'
@@ -44,7 +44,7 @@ const Header = () => {
 
 
   return (
-    <div className='flex flex-col md:flex-row justify-between items-stretch bg-white shadow-sm'>
+    <header className='flex flex-col md:flex-row justify-between items-stretch bg-white shadow-sm' id="main-header">
 
       {/* Logos - Alineados a la izquierda */}
       <div className="flex justify-around md:justify-start items-center w-full md:w-auto gap-2 md:gap-4 flex-shrink-0 px-2 md:px-0">
@@ -91,7 +91,7 @@ const Header = () => {
         </div>
       )}
 
-    </div>
+    </header>
   )
 }
 

@@ -113,14 +113,14 @@ const PopupContent = React.memo(({ place }) => (
 
     {/* Botón de direcciones */}
     <a 
-      className='block w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold py-2 px-4 rounded-lg text-center transition-all duration-200 shadow-md hover:shadow-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2' 
+      className='block w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-4 rounded-lg text-center transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2' 
       href={`https://www.google.com/maps/dir//${place.location[0]},${place.location[1]}`} 
       target="_blank"
       rel="noopener noreferrer"
       aria-label={`Ver direcciones a ${place.name} en Google Maps`}
     >
-      <span className="flex items-center justify-center gap-2">
-        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+      <span className="flex items-center justify-center gap-2 text-white">
+        <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
           <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
         </svg>
         ¿Cómo Llegar?
@@ -136,6 +136,7 @@ const Maps = () => {
   const { places, position } = useContext(PlaceContext)
   const mapRef = useRef();
   const [alert, setAlert] = useState(true)
+  const [mapHeight, setMapHeight] = useState('100vh')
 
   // Calcular el zoom basado en la posición (memoizado)
   const currentZoom = useMemo(() => {
@@ -147,6 +148,38 @@ const Maps = () => {
   // Callback memoizado para cerrar alerta
   const handleCloseAlert = useCallback(() => {
     setAlert(false)
+  }, [])
+
+  // Calcular altura del mapa dinámicamente
+  useEffect(() => {
+    const calculateHeight = () => {
+      // Buscar el header por id primero, luego por tag
+      const header = document.getElementById('main-header') || document.querySelector('header')
+      const headerHeight = header ? header.offsetHeight : 0
+      const hrHeight = 1 // altura del hr
+      
+      // Usar window.innerHeight para móviles (más preciso que vh)
+      const viewportHeight = window.innerHeight
+      const availableHeight = viewportHeight - headerHeight - hrHeight
+      
+      setMapHeight(`${availableHeight}px`)
+    }
+
+    // Calcular inmediatamente
+    calculateHeight()
+    
+    // Calcular después de que las imágenes del header se carguen
+    const timer = setTimeout(calculateHeight, 100)
+    
+    // Recalcular en eventos
+    window.addEventListener('resize', calculateHeight)
+    window.addEventListener('orientationchange', calculateHeight)
+
+    return () => {
+      clearTimeout(timer)
+      window.removeEventListener('resize', calculateHeight)
+      window.removeEventListener('orientationchange', calculateHeight)
+    }
   }, [])
 
   // Auto-cerrar alerta después de 5 segundos
@@ -165,7 +198,7 @@ const Maps = () => {
         center={position}
         zoom={currentZoom}
         scrollWheelZoom={true}
-        style={{ height: '89vh', width: "100%" }}
+        style={{ height: mapHeight, width: "100%" }}
         ref={mapRef}
       >
         <TileLayer

@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  /* Prevenir scroll no deseado en móviles */
+  html, body {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+}
 
 @layer utilities {
   @variants responsive {

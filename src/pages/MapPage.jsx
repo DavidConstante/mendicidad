@@ -6,11 +6,11 @@ import 'animate.css';
 const MapPage = () => {
 
   return (
-    <div className=''>
+    <div className='h-screen overflow-hidden flex flex-col'>
       <Header />
-      <hr />
+      <hr className='flex-shrink-0' />
 
-      <div className='animate__animated animate__fadeIn'>
+      <div className='flex-1 animate__animated animate__fadeIn overflow-hidden'>
 
         <Maps />
 
