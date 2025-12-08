@@ -136,7 +136,6 @@ const Maps = () => {
   const { places, position } = useContext(PlaceContext)
   const mapRef = useRef();
   const [alert, setAlert] = useState(true)
-  const [mapHeight, setMapHeight] = useState('100vh')
 
   // Calcular el zoom basado en la posición (memoizado)
   const currentZoom = useMemo(() => {
@@ -150,38 +149,6 @@ const Maps = () => {
     setAlert(false)
   }, [])
 
-  // Calcular altura del mapa dinámicamente
-  useEffect(() => {
-    const calculateHeight = () => {
-      // Buscar el header por id primero, luego por tag
-      const header = document.getElementById('main-header') || document.querySelector('header')
-      const headerHeight = header ? header.offsetHeight : 0
-      const hrHeight = 1 // altura del hr
-      
-      // Usar window.innerHeight para móviles (más preciso que vh)
-      const viewportHeight = window.innerHeight
-      const availableHeight = viewportHeight - headerHeight - hrHeight
-      
-      setMapHeight(`${availableHeight}px`)
-    }
-
-    // Calcular inmediatamente
-    calculateHeight()
-    
-    // Calcular después de que las imágenes del header se carguen
-    const timer = setTimeout(calculateHeight, 100)
-    
-    // Recalcular en eventos
-    window.addEventListener('resize', calculateHeight)
-    window.addEventListener('orientationchange', calculateHeight)
-
-    return () => {
-      clearTimeout(timer)
-      window.removeEventListener('resize', calculateHeight)
-      window.removeEventListener('orientationchange', calculateHeight)
-    }
-  }, [])
-
   // Auto-cerrar alerta después de 5 segundos
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -193,12 +160,12 @@ const Maps = () => {
 
 
   return (
-    <>
+    <div className="w-full h-full relative">
       <MapContainer
         center={position}
         zoom={currentZoom}
         scrollWheelZoom={true}
-        style={{ height: mapHeight, width: "100%" }}
+        style={{ height: '100%', width: "100%" }}
         ref={mapRef}
       >
         <TileLayer
@@ -246,7 +213,7 @@ const Maps = () => {
           </Alert>
         </div>
       )}
-    </>
+    </div>
   )
 }
 
