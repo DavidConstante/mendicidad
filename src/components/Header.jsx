@@ -49,11 +49,11 @@ const Header = () => {
       {/* Logos - Alineados a la izquierda */}
       <div className="flex justify-around md:justify-start items-center w-full md:w-auto gap-2 md:gap-4 flex-shrink-0 px-2 md:px-0">
         <NavLink to={'/'} className="transition-transform hover:scale-105" aria-label="Inicio">
-          <img className='p-2 md:p-3' width={100} height={50} src={logoMiess1} alt="Logo MIESS 1" loading="lazy" />
+          <img className='p-2 md:p-3' width={140} height={70} src={logoMiess1} alt="Logo MIESS 1" loading="lazy" />
         </NavLink>
 
         <NavLink to={'/'} className="transition-transform hover:scale-105" aria-label="Inicio">
-          <img className='p-2 md:p-3' width={100} height={50} src={logoMiess2} alt="Logo MIESS 2" loading="lazy" />
+          <img className='p-2 md:p-3' width={140} height={70} src={logoMiess2} alt="Logo MIESS 2" loading="lazy" />
         </NavLink>
       </div>
 
