@@ -3,8 +3,9 @@ import { Route, Routes } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import MapPage from './pages/MapPage'
 
-function App() {
+//? Deployed on https://app.netlify.com/teams/davidconstante/projects
 
+function App() {
 
 
   return (
