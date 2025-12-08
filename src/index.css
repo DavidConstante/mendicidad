@@ -3,9 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-  /* Prevenir scroll no deseado en móviles */
+  /* Prevenir scroll no deseado en móviles solo en la página principal */
   html, body {
-    overflow: hidden;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -15,7 +14,6 @@
   #root {
     height: 100%;
     width: 100%;
-    overflow: hidden;
   }
 }
 
