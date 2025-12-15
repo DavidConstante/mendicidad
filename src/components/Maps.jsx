@@ -50,11 +50,11 @@ const ChangeCenter = ({ coords, zoom }) => {
 
 // Componente para el contenido del popup (memoizado)
 const PopupContent = React.memo(({ place }) => (
-  <div className="p-2 space-y-3">
+  <div className="p-3 space-y-4">
     {/* Título del lugar */}
-    <div className="border-b-2 border-blue-500 pb-2">
-      <h3 className="text-lg font-bold text-gray-800 flex items-center gap-2">
-        <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+    <div className="bg-gradient-to-r from-purple-600 to-purple-800 rounded-xl p-3 shadow-lg">
+      <h3 className="text-lg font-bold text-white flex items-center gap-2">
+        <svg className="w-5 h-5 text-orange-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
           <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
         </svg>
         {place.name}
@@ -62,14 +62,14 @@ const PopupContent = React.memo(({ place }) => (
     </div>
 
     {/* Información de contacto */}
-    <div className="space-y-2">
+    <div className="space-y-3">
       {place.manager && place.phone && (
-        <div className="bg-blue-50 p-2 rounded-lg">
-          <p className="text-xs text-gray-600 font-semibold">Responsable 1:</p>
-          <p className="text-sm font-medium text-gray-800">{place.manager}</p>
+        <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-3 rounded-xl border border-blue-200 shadow-md hover:shadow-lg transition-all duration-300">
+          <p className="text-xs text-blue-700 font-bold mb-1">👤 Responsable 1:</p>
+          <p className="text-sm font-bold text-gray-800">{place.manager}</p>
           <a 
             href={`tel:${place.phone}`}
-            className="text-sm text-blue-600 hover:text-blue-800 flex items-center gap-1 mt-1 transition-colors"
+            className="text-sm text-blue-600 hover:text-blue-800 font-semibold flex items-center gap-1.5 mt-2 transition-all duration-200 hover:translate-x-1"
             aria-label={`Llamar a ${place.manager}`}
           >
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
@@ -81,12 +81,12 @@ const PopupContent = React.memo(({ place }) => (
       )}
 
       {place.manager2 && place.phone2 && (
-        <div className="bg-green-50 p-2 rounded-lg">
-          <p className="text-xs text-gray-600 font-semibold">Responsable 2:</p>
-          <p className="text-sm font-medium text-gray-800">{place.manager2}</p>
+        <div className="bg-gradient-to-br from-green-50 to-green-100 p-3 rounded-xl border border-green-200 shadow-md hover:shadow-lg transition-all duration-300">
+          <p className="text-xs text-green-700 font-bold mb-1">👤 Responsable 2:</p>
+          <p className="text-sm font-bold text-gray-800">{place.manager2}</p>
           <a 
             href={`tel:${place.phone2}`}
-            className="text-sm text-green-600 hover:text-green-800 flex items-center gap-1 mt-1 transition-colors"
+            className="text-sm text-green-600 hover:text-green-800 font-semibold flex items-center gap-1.5 mt-2 transition-all duration-200 hover:translate-x-1"
             aria-label={`Llamar a ${place.manager2}`}
           >
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
@@ -99,21 +99,21 @@ const PopupContent = React.memo(({ place }) => (
 
       {/* Horario */}
       {place.schedule && (
-        <div className="bg-gray-50 p-2 rounded-lg">
-          <p className="text-xs text-gray-600 font-semibold flex items-center gap-1">
+        <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-3 rounded-xl border border-purple-200 shadow-md">
+          <p className="text-xs text-purple-700 font-bold mb-1 flex items-center gap-1.5">
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
             </svg>
-            Horario:
+            ⏰ Horario:
           </p>
-          <p className="text-sm text-gray-700">{place.schedule}</p>
+          <p className="text-sm font-semibold text-gray-800">{place.schedule}</p>
         </div>
       )}
     </div>
 
     {/* Botón de direcciones */}
     <a 
-      className='block w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-4 rounded-lg text-center transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2' 
+      className='block w-full bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white font-bold py-3.5 px-4 rounded-xl text-center transition-all duration-300 shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-600/50 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2' 
       href={`https://www.google.com/maps/dir//${place.location[0]},${place.location[1]}`} 
       target="_blank"
       rel="noopener noreferrer"
@@ -123,7 +123,7 @@ const PopupContent = React.memo(({ place }) => (
         <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
           <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
         </svg>
-        ¿Cómo Llegar?
+        📍 ¿Cómo Llegar?
       </span>
     </a>
   </div>
@@ -191,23 +191,25 @@ const Maps = () => {
 
       {/* Alerta informativa */}
       {alert && (
-        <div className="absolute z-[1000] top-2 right-2 left-2 md:left-auto md:right-4 md:top-4 md:w-96 animate__animated animate__fadeInDown">
+        <div className="absolute z-[1000] top-3 right-3 left-3 md:left-auto md:right-5 md:top-5 md:w-96 animate__animated animate__fadeInDown">
           <Alert
             onClose={handleCloseAlert}
             severity="info"
             variant='filled'
-            className="shadow-lg"
+            className="shadow-2xl rounded-2xl"
             sx={{
               '& .MuiAlert-message': {
                 width: '100%'
               },
-              cursor: 'pointer'
+              cursor: 'pointer',
+              borderRadius: '1rem',
+              backdropFilter: 'blur(10px)'
             }}
             role="alert"
             aria-live="polite"
           >
-            <AlertTitle className="font-bold">Información</AlertTitle>
-            <p className="text-sm">
+            <AlertTitle className="font-bold text-base">ℹ️ Información</AlertTitle>
+            <p className="text-sm font-medium">
               Toca uno de los puntos marcados en el mapa para ver los detalles de contacto.
             </p>
           </Alert>
