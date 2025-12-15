@@ -1,8 +1,9 @@
 import { useContext, useEffect, useState, useCallback, useRef } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 
-import logoMiess1 from '../assets/logo1.webp'
 import logoMiess2 from '../assets/Logo_ENEC.png'
+
+import logo from '../assets/logos/logo.svg'
 
 import { PlaceContext } from '../contextPlaceContext'
 import Info from './Info'
@@ -44,22 +45,30 @@ const Header = () => {
 
 
   return (
-    <header className='flex flex-col md:flex-row justify-between items-stretch bg-white shadow-sm' id="main-header">
+    <header className='flex flex-col md:flex-row justify-between items-stretch   shadow-sm '  id="main-header">
 
       {/* Logos - Alineados a la izquierda */}
-      <div className="flex justify-around md:justify-start items-center w-full md:w-auto gap-2 md:gap-4 flex-shrink-0 px-2 md:px-0">
+
+
+      <div className="flex items-center justify-between w-full gap-2 md:gap-4 px-2 ">
+        <div className='flex items-center justify-center'>
         <NavLink to={'/'} className="transition-transform hover:scale-105" aria-label="Inicio">
-          <img className='p-2 md:p-3' width={140} height={70} src={logoMiess1} alt="Logo MIESS 1" loading="lazy" />
+          <img className='p-2 md:p-3' width={140} height={70} src={logo} alt="Logo MIESS 1" loading="lazy" />
         </NavLink>
 
         <NavLink to={'/'} className="transition-transform hover:scale-105" aria-label="Inicio">
           <img className='p-2 md:p-3' width={140} height={70} src={logoMiess2} alt="Logo MIESS 2" loading="lazy" />
         </NavLink>
+        </div>
+
+        <NavLink to={'/more'} className={`transition-transform hover:scale-105 ${ isMapPage && 'hidden'}`} aria-label="Más información">
+          <span className='text-sm md:text-base font-medium text-gray-700 px-2 md:px-3'>Cónoce más</span>
+        </NavLink>
       </div>
 
       {/* Slider de lugares - Ocupa todo el espacio disponible */}
       {isMapPage && (
-        <div className='w-full md:flex-1 flex items-center px-2 md:px-4 md:ml-4'>
+        <div className='lg:w-4/5 md:flex-1 flex items-center px-2 md:px-4 md:ml-4'>
           <div className='relative w-full'>
             {/* Gradiente izquierdo */}
             <div className='absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none hidden lg:block' />

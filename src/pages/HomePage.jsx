@@ -3,21 +3,50 @@ import { NavLink } from 'react-router-dom'
 import Header from '../components/Header'
 import video from '../assets/video.mp4'
 
+import banner from '../assets/banner/banner.webp'
+
+import hero1 from '../assets/hero/hero1.webp'
+import hero2 from '../assets/hero/hero2.webp'
+import hero3 from '../assets/hero/hero3.webp'
+import hero4 from '../assets/hero/hero4.webp'
+import { Footer } from '../components/Footer'
+
+
 const HomePage = () => {
   return (
-    <div>
-      {/* Header */}
+    <div className=''>
       <Header />
       <hr />
 
       {/* Hero */}
       <div className='flex flex-col items-center bg-gradient-to-r from-bg to-purple-800 text-white'>
-        <h1 className="mx-4 md:mx-8 mt-8 mb-6 text-3xl md:text-5xl lg:text-6xl text-center font-extrabold tracking-tight leading-tight">
+        <h1 className="hidden">
           {`Derechos con Dignidad`}
         </h1>
 
+        <img src={banner} alt="Banner sobre la donación segura" className='w-full max-w-5xl rounded-lg shadow-lg shadow-purple-900/30 mb-8' loading="lazy" />
+
+          <NavLink to='/maps'>
+          <button className='bg-orange-400 hover:bg-orange-500 duration-300 hover:scale-110 text-white font-bold py-2 px-6 mb-4 lg:mb-10 rounded-lg text-sm sm:text-base'>
+            Puntos de donación
+          </button>
+        </NavLink>
+
+        <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24'>
+          <img src={hero1} alt="Hero 1" />
+          <img src={hero2} alt="Hero 2" />
+          <img src={hero3} alt="Hero 3" />
+          <img src={hero4} alt="Hero 4" />
+        </div>
+
+          <NavLink to='/maps'>
+          <button className='bg-orange-400 hover:bg-orange-500 duration-300 hover:scale-110 text-white font-bold py-2 px-6 mb-4 lg:mb-10 rounded-lg text-sm sm:text-base'>
+            Puntos de donación
+          </button>
+        </NavLink>
+
         {/* Texto principal */}
-        <div className='w-full max-w-5xl px-5 sm:px-6 md:px-10 lg:px-16 xl:px-24 pb-8 space-y-4 text-left md:text-justify text-base sm:text-lg md:text-xl leading-relaxed'>
+        <div className='w-full px-5 sm:px-6 md:px-10 lg:px-16 xl:px-24 pb-8 space-y-4 text-left md:text-justify text-base sm:text-lg md:text-xl leading-relaxed'>
           <p>
             {`Entregar donaciones en la vía pública es peligroso. Puedes ponerte en contacto con las comunidades aledañas para que tú mismo entregues tus donaciones en un lugar seguro. Cuida tu integridad y la de los demás.`}
           </p>
@@ -51,15 +80,18 @@ const HomePage = () => {
         <div className='w-full max-w-5xl px-4 sm:px-6 md:px-10 mb-8'>
           <div className='flex flex-col lg:flex-row items-center justify-center gap-6 md:gap-10'>
             {/* Video */}
-            <div className='w-full flex justify-center lg:justify-end'>
-              <div className='relative w-[220px] sm:w-[260px] md:w-[320px] lg:w-[360px] xl:w-[380px] rounded-2xl overflow-hidden shadow-2xl shadow-purple-900/40 border border-white/10 bg-black/40'>
-                <video
-                  controls
-                  src={video}
-                  className='w-full h-full object-contain max-h-[520px] sm:max-h-[580px] md:max-h-[640px] bg-black'
-                ></video>
-              </div>
-            </div>
+        <div className='w-full flex justify-center lg:justify-end'>
+    <div className='relative w-[220px] sm:w-[260px] md:w-[320px] lg:w-[360px] xl:w-[380px] rounded-2xl overflow-hidden shadow-2xl shadow-purple-900/40 border border-white/10 bg-black/40'>
+        <video
+            controls
+            src={video}
+            className='w-full h-full object-contain max-h-[520px] sm:max-h-[580px] md:max-h-[640px] bg-black'
+            preload="auto" 
+            autoPlay
+            muted
+        />
+    </div>
+</div>
 
             {/* Lista donaciones */}
             <div className='w-full lg:w-1/2 mt-6 lg:mt-0 lg:ml-4'>
@@ -81,9 +113,7 @@ const HomePage = () => {
           </button>
         </NavLink>
 
-        <p className='text-slate-300 w-full text-center text-xs sm:text-sm pb-4'>
-          copyright © 2025 - Célimo David Constante
-        </p>
+        <Footer />
       </div>
     </div>
   )
